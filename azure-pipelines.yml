@@ -10,7 +10,7 @@ trigger:
 
 stages:
 - stage: Build
-  displayName: Build stage
+  displayName: 'Build stage'
 jobs:
 - job: Build
   timeoutInMinutes: 100
@@ -38,7 +38,7 @@ jobs:
 
 - stage: Deploy
   displayName: Deploy stage
-  dependsOn: Build
+  dependsOn: 'Build'
   condition: succeeded()
   jobs:
   - deployment: DeployLinuxWebApp
