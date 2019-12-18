@@ -34,7 +34,6 @@ jobs:
       PathtoPublish: '$(build.artifactstagingdirectory)'
 
 - job: Deploy
-  displayName: Deploy stage
   dependsOn: Build
   condition: succeeded()
   jobs:
